@@ -44,6 +44,7 @@ const UserProvider: React.FC<{ children: React.ReactNode }> = ({
 				}
 			})();
 		}
+
 		return () => {
 			controller.abort();
 		};

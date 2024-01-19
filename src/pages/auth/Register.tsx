@@ -29,10 +29,13 @@ const Register = () => {
 			right: form.get('right'),
 		};
 
-		register(data);
+		register({
+			username: data?.username + '',
+			password: data?.password + '',
+			right: Number(data?.right),
+		});
 	};
 
-	console.log(user);
 	return (
 		<CenterLayout>
 			<form onSubmit={onSubmit} className='flex flex-col justify-center gap-3'>
@@ -95,15 +98,15 @@ const Register = () => {
 						onChange={(e) =>
 							setCredentials((prev) => ({
 								...prev,
-								[e.target.name]: e.target.value,
+								[e.target.name]: +e.target.value,
 							}))
 						}
 					>
-						<option selected value='USER'>
+						<option value='101' defaultValue='101'>
 							USER
 						</option>
-						<option value='ADMIN'>ADMIN</option>
-						<option value='MODERATOR'>MODERATOR</option>
+						<option value='201'>MODERATOR</option>
+						<option value='302'>ADMIN</option>
 					</select>
 				</div>
 

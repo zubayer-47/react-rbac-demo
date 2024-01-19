@@ -7,14 +7,14 @@ const Nav = () => {
 	const { state, logout } = useAuth();
 
 	return (
-		<div className='flex justify-end items-center gap-5 py-2'>
+		<div className='flex justify-end items-center gap-5 py-3'>
 			{/* <PermissionWrapper
 				permission={[UserRight.ADMIN, UserRight.MODER, UserRight.USER]}
 				links
 			> */}
 			<Link
 				to='/'
-				className='bg-teal-500 text-gray-100 px-2 py-1 rounded-md text-sm'
+				className='bg-teal-500 text-gray-100 px-2 py-1 rounded-md text-xl'
 			>
 				Home
 			</Link>
@@ -22,7 +22,7 @@ const Nav = () => {
 			<PermissionWrapper permission={UserRight.ADMIN} links>
 				<Link
 					to='/dashboard'
-					className='bg-teal-500 text-gray-100 px-2 py-1 rounded-md text-sm'
+					className='bg-teal-500 text-gray-100 px-2 py-1 rounded-md text-xl'
 				>
 					Dashboard
 				</Link>
@@ -30,7 +30,7 @@ const Nav = () => {
 			<PermissionWrapper permission={UserRight.MODER} links>
 				<Link
 					to='/profile'
-					className='bg-teal-500 text-gray-100 px-2 py-1 rounded-md text-sm'
+					className='bg-teal-500 text-gray-100 px-2 py-1 rounded-md text-xl'
 				>
 					Profile
 				</Link>
@@ -38,7 +38,7 @@ const Nav = () => {
 			<PermissionWrapper permission={[UserRight.MODER, UserRight.ADMIN]} links>
 				<Link
 					to='/settings'
-					className='bg-teal-500 text-gray-100 px-2 py-1 rounded-md text-sm'
+					className='bg-teal-500 text-gray-100 px-2 py-1 rounded-md text-xl'
 				>
 					Settings
 				</Link>
@@ -47,7 +47,7 @@ const Nav = () => {
 			{state.user ? (
 				<button
 					onClick={logout}
-					className='bg-teal-500 text-gray-100 px-2 py-1 rounded-md text-sm'
+					className='bg-teal-500 text-gray-100 px-2 py-1 rounded-md text-xl'
 				>
 					Sign Out
 				</button>
@@ -55,13 +55,13 @@ const Nav = () => {
 				<>
 					<Link
 						to='/signin'
-						className='bg-teal-500 text-gray-100 px-2 py-1 rounded-md text-sm'
+						className='bg-teal-500 text-gray-100 px-2 py-1 rounded-md text-xl'
 					>
 						Log In
 					</Link>
 					<Link
 						to='/signup'
-						className='bg-teal-500 text-gray-100 px-2 py-1 rounded-md text-sm'
+						className='bg-teal-500 text-gray-100 px-2 py-1 rounded-md text-xl'
 					>
 						Sign Up
 					</Link>

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const AccessDenied = () => {
+	console.log('AccessDenied :');
 	return (
 		<div className='flex flex-col justify-center items-center h-full'>
 			<h2 className='text-5xl text-gray-600'>403</h2>

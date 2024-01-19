@@ -37,7 +37,7 @@ export default function useAuth() {
 	);
 
 	const register = useCallback(
-		async (data: unknown) => {
+		async (data: { username: string; password: string; right: number }) => {
 			try {
 				const res = await axios.post(`/auth/signup`, data);
 				console.log('res :', res);

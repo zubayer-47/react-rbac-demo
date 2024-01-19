@@ -9,8 +9,10 @@ interface Props extends PropsWithChildren {
 }
 
 const PermissionWrapper = ({ permission, children, links = false }: Props) => {
+	// debugger;
 	console.log('permission :', permission);
 	const { state } = useAuth();
+	console.log('state :', state);
 
 	const right = state.user?.rights;
 	// console.log('right :', right);
